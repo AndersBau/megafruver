@@ -303,7 +303,7 @@ footer {
 
 @media only screen and (max-width: 600px) and (min-width:372px){
   .container {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .grid-parent {
       display: grid;
