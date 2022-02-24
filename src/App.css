@@ -1,38 +1,654 @@
-.App {
+.container {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(250, 248, 248);
+  font-weight: 300;
+  box-sizing: border-box;
   text-align: center;
+  font-size: 1rem;
+}
+.grid-parent {
+  display: grid;
+  grid-template: 4vh 13vh 82vh 50vh 50vh 20vh 25vh / repeat(8, 1fr);
+  grid-template-areas:
+  "covid covid covid covid covid covid covid covid"
+  "header header header header header header header header"
+  "banner banner banner banner banner banner banner banner"
+  "products products products products products products products products"
+  "phrase phrase phrase phrase phrase phrase phrase phrase"
+  "bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg"
+  "footer footer footer footer footer footer footer footer"
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.covid {
+  grid-area: covid;
+  background-color: #7d9612;
+  font-size: 1.3em;
+  padding-top: .6em;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  grid-area: header;
+  display: inline-flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.banner {
+  grid-area: banner;
+  background-image: url(../../img/bannerbg.jpg);
+  background-size: cover;
+}
+.products {
+  grid-area: products;
   display: flex;
-  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+}
+.phrase {
+  grid-area: phrase;
+  background-color: rgb(232, 241, 241);
+}
+.bottomimg {
+  grid-area: bottonimg;
+  background-image: url(../../img/home-bottom-img.jpg);
+  background-size: cover;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  margin-left: 15%;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.logo img {
+  width: 13rem;
+}
+nav {
+  width: 60%;
+  display: flex;
+  justify-content:flex-end;
+  padding-top: 2.5em;
+}
+nav a {
+  color: #7bad0e;
+  width: 5em;
+  height: 1em;
+  margin: 2em .4em 0 .4em;
+  font-size: 1.9em;
+
+}
+nav a:last-child {
+  background-color: #7bad0e;
+  color: #fff;
+  border-radius: 15px;
+  height: 1.3em;
+}
+.mainphrase_container {
+  position: relative;
+  top: 10em;;
+  margin-left: 15%;
+  text-align: left;
+  width: 70%;
+
+}
+.mainphrase {
+  font-family: 'Cabin', sans-serif;
+  font-size: 10em;
+  color: #7bad0e;
+  line-height: .9em;
+  margin-bottom: .7em;
+}
+.mainphrase span {
+    color: #295939;
+    font-size: .4em;
+}
+.mainphrase_container a:hover {
+    text-decoration: none;
+}
+.orderbtn {
+    border: none;
+    background-color: #214d30;
+    padding: .8em 2em;
+    height: 2em;
+    margin: 0 3em;
+    border-radius: 25px;
+    color: #f1f1f1;
+    font-size: 2em;
+    text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+.product {
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fruits, .veggies, .pantry, .package {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 22em;
+  width: 22em;
+  border-radius: 12em;
+}
+.fruits{
+background-color: #f3c623;
+}
+.veggies {
+  background-color: #bcda14;
+}
+.pantry {
+  background-color: #30c9ce;
+}
+.package {
+  background-color: #f3e66e;
+  border: 5px solid rgb(231, 153, 7);
+}
+.product img {
+    height: 100%;
+}
+.product-title {
+    font-size: 3.2em;
+    color: #7bad0e;
+    margin-top: .5em;
+}
+.product-list {
+      color: #214d30;
+      font-size: 1.9em;
+      margin-top: .6em;
+}
+.phrase p span {
+  color: #7bad0e;
+  font-family: 'Cabin', sans-serif;
+  font-size: 2em;
+}
+.phrase p {
+  color: #214d30;
+  font-size: 2.5em;
+  margin-top: 1.3em;
+  line-height: 2em;
+}
+
+.phrase a {
+  color: #214d30;
+  font-size: 2em;
+  font-family: 'Cabin', sans-serif;
+}
+.phrase a:hover {
+  text-decoration: none;
+}
+footer {
+  grid-area: footer;
+  color: #7bad0e;
+}
+
+.bottominfo {
+  font-size: 2em;
+  height: 60%;
+  padding-top: .6em;
+  line-height: 1.7em;
+}
+.bottominfo a {
+  color: #7bad0e;
+}
+.bottominfo a:hover {
+  text-decoration: none;
+}
+.bottominfo p span {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.social {
+  background-color: #7bad0e;
+  height: 40%;
+  color: #f1f1f1;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+.fa {
+  padding: .4em;
+  margin: 0 .3em;
+  font-size: 2em;
+  width: 1.7em;
+  height: 1.7em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 1em;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.fa-facebook {
+  background: #214d30;
+  color: #f1f1f1;
+}
+.fa-instagram {
+  background: #214d30;
+  color: #f1f1f1;
+}
+.copyrigth {
+    padding-top: .5em;
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 820px) and (min-width:600px) {
+  .container {
+    font-size: 1.3rem;
   }
-  to {
-    transform: rotate(360deg);
+    nav {
+        width: 65%;
+    }
+    nav a {
+        font-size: 2.5em;
+    }
+  .banner {
+      background-image: url(../../img/mombileHomeBG.jpg);
+      border-radius: 0 0 50px 50px;
+      box-shadow: 10px 10px 10px grey;
   }
+  .mainphrase_container {
+      top: 7em;
+      width: 80%;
+      text-align: left;
+      margin: 0 auto;
+  }
+  .mainphrase {
+      font-size: 8em;
+      margin-bottom: 1.5em;
+  }
+  .mainphrase span {
+      font-size: .5em;
+      line-height: .1em;
+  }
+  .orderbtn {
+      margin: 0;
+      font-size: 2.4em;
+  }
+
+
+  .product {
+      width: 50%;
+  }
+  .fruits, .veggies, .pantry, .package {
+      margin:  0 auto;
+      text-align: center;
+      position: relative;
+      height: 16em;
+      width: 16em;
+      border-radius: 8em;
+    }
+    .product img {
+        width: 100%;
+    }
+
+    .product h1 {
+      font-size: 2.5em;
+      margin-top: .5em;
+  }
+  .product h2 {
+        font-size: 1.7em;
+        margin-top: .6em;
+}
+.phrase {
+    display: inline-block;
+}
+}
+
+@media only screen and (max-width: 600px) and (min-width:372px){
+  .container {
+    font-size: 1.4rem;
+  }
+  .grid-parent {
+      display: grid;
+      grid-template: 10vh 26vh 63vh 172vh 50vh 26vh 26vh / repeat(8, 1fr);
+      grid-template-areas:
+      "covid covid covid covid covid covid covid covid"
+      "header header header header header header header header"
+      "banner banner banner banner banner banner banner banner"
+      "products products products products products products products products"
+      "phrase phrase phrase phrase phrase phrase phrase phrase"
+      "bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg"
+      "footer footer footer footer footer footer footer footer"
+  }
+
+  .header {
+      display: block;
+      width: 100%;
+  }
+  .logo {
+      margin: 0 auto;
+      width: 100%;
+
+  }
+  .logo a {
+      margin-top: 1em;
+  }
+
+  nav {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+  }
+  nav a {
+      background-color: #7bad0e;
+      color: #f1f1f1;
+      height: 1.9em;
+      font-size: 1.9em;
+      margin: 0 1px;
+      width: 100%;
+      padding-top: 8px;
+
+  }
+  nav a:last-child {
+      background-color: #7bad0e;
+      color: #fff;
+      border-radius: 0;
+      height: 1.9em;
+  }
+  .banner {
+      background-image: url(../../img/mombileHomeBG2.jpg);
+      border-radius: 0 0 30px 30px;
+      box-shadow: 10px 10px 10px grey;
+  }
+  .mainphrase_container {
+      top: 1.7em;
+      left: 1em;
+      width: 90%;
+      text-align: left;
+      margin: 0 auto;
+  }
+  .mainphrase {
+      font-size: 4.8em;
+      margin-bottom: .6em;
+  }
+  .mainphrase span {
+      font-size: .5em;
+      line-height: .1em;
+  }
+  .orderbtn {
+      font-size: 1.7em;
+      padding: .8em 1em;
+  }
+  .products {
+      display: block;
+  }
+
+ .product1, .product2, .product3, .product4 {
+     margin-top: 3.5em;
+ }
+  .fruits, .veggies, .pantry, .package {
+      margin:  0 auto;
+      text-align: center;
+      position: relative;
+      height: 16em;
+      width: 16em;
+      border-radius: 8em;
+    }
+    .product img {
+        width: 100%;
+    }
+
+    .product h1 {
+      font-size: 2.5em;
+      margin-top: .5em;
+  }
+  .product h2 {
+        font-size: 1.7em;
+        margin-top: .6em;
+}
+.phrase {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 2em;
+}
+.phrase p {
+    display: inline-block;
+    font-size: 1.8em;
+}
+.phrase p span {
+    font-size: 1.5em;
+}
+.bottomimg {
+    margin-top: 5em;
+}
+
+}
+@media only screen and (max-width: 375px) {
+
+  .grid-parent {
+      display: grid;
+      grid-template: 10vh 27vh 61vh 185vh 55vh 30vh 30vh / repeat(8, 1fr);
+      grid-template-areas:
+      "covid covid covid covid covid covid covid covid"
+      "header header header header header header header header"
+      "banner banner banner banner banner banner banner banner"
+      "products products products products products products products products"
+      "phrase phrase phrase phrase phrase phrase phrase phrase"
+      "bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg"
+      "footer footer footer footer footer footer footer footer"
+  }
+
+  .header {
+      display: block;
+      width: 100%;
+  }
+  .logo {
+      margin: 0 auto;
+      width: 100%;
+
+  }
+  .logo a {
+      margin-top: 1em;
+  }
+
+  nav {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+  }
+  nav a {
+      background-color: #7bad0e;
+      color: #fff;
+      height: 1.9em;
+      font-size: 1.9em;
+      margin: 0 1px;
+      width: 100%;
+      padding-top: 8px;
+
+  }
+  nav a:last-child {
+      background-color: #7bad0e;
+      color: #fff;
+      border-radius: 0;
+      height: 1.9em;
+  }
+  .banner {
+      background-image: url(../../img/mombileHomeBG2.jpg);
+      border-radius: 0 0 30px 30px;
+      box-shadow: 10px 10px 10px grey;
+  }
+  .mainphrase_container {
+      top: 1.7em;
+      left: 1em;
+      width: 90%;
+      text-align: left;
+      margin: 0 auto;
+  }
+  .mainphrase {
+      font-size: 4.8em;
+      margin-bottom: .6em;
+      line-height: .8em;
+  }
+  .mainphrase span {
+      font-size: .5em;
+      line-height: .1em;
+  }
+  .orderbtn {
+      font-size: 1.7em;
+      padding: .8em 1em;
+  }
+  .products {
+      display: block;
+  }
+
+ .product1, .product2, .product3, .product4 {
+     margin-top: 3.5em;
+ }
+  .fruits, .veggies, .pantry, .package {
+      margin:  0 auto;
+      text-align: center;
+      position: relative;
+      height: 16em;
+      width: 16em;
+      border-radius: 8em;
+    }
+    .product img {
+        width: 100%;
+    }
+
+    .product h1 {
+      font-size: 2.5em;
+      margin-top: .5em;
+  }
+  .product h2 {
+        font-size: 1.7em;
+        margin-top: .6em;
+}
+.phrase {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 2em;
+}
+.phrase p {
+    display: inline-block;
+    font-size: 1.8em;
+}
+.phrase p span {
+    font-size: 1.5em;
+}
+.bottomimg {
+    margin-top: 5em;
+}
+}
+@media only screen and (max-width: 320px) {
+  .grid-parent {
+      display: grid;
+      grid-template: 10vh 33vh 55vh 205vh 68vh 40vh 35vh / repeat(8, 1fr);
+      grid-template-areas:
+      "covid covid covid covid covid covid covid covid"
+      "header header header header header header header header"
+      "banner banner banner banner banner banner banner banner"
+      "products products products products products products products products"
+      "phrase phrase phrase phrase phrase phrase phrase phrase"
+      "bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg bottonimg"
+      "footer footer footer footer footer footer footer footer"
+  }
+
+  .header {
+      display: block;
+      width: 100%;
+  }
+  .logo {
+      margin: 0 auto;
+      width: 100%;
+
+  }
+  .logo a {
+      margin-top: 1em;
+  }
+
+  nav {
+      justify-content: space-evenly;
+      width: 100%;
+  }
+  nav a {
+      background-color: #7bad0e;
+      color: #fff;
+      height: 1.9em;
+      font-size: 1.9em;
+      margin: 0 1px;
+      width: 100%;
+      padding-top: 8px;
+
+  }
+  nav a:last-child {
+      background-color: #7bad0e;
+      color: #fff;
+      border-radius: 0;
+      height: 1.9em;
+  }
+  .banner {
+      background-image: url(../../img/mombileHomeBG2.jpg);
+      border-radius: 0 0 30px 30px;
+      box-shadow: 10px 10px 10px grey;
+  }
+  .mainphrase_container {
+      top: 1em;
+      left: 1em;
+      width: 90%;
+      text-align: left;
+      margin: 0 auto;
+  }
+  .mainphrase {
+      font-size: 4em;
+      margin-bottom: .8em;
+      line-height: .8em;
+  }
+  .mainphrase span {
+      font-size: .5em;
+      line-height: .1em;
+  }
+  .orderbtn {
+      font-size: 1.7em;
+      padding: .8em .5em;
+  }
+  .products {
+      display: block;
+  }
+
+ .product1, .product2, .product3, .product4 {
+     margin-top: 3.5em;
+ }
+  .fruits, .veggies, .pantry, .package {
+      margin:  0 auto;
+      text-align: center;
+      position: relative;
+      height: 16em;
+      width: 16em;
+      border-radius: 8em;
+    }
+    .product img {
+        width: 100%;
+    }
+
+    .product h1 {
+      font-size: 2.5em;
+      margin-top: .5em;
+  }
+  .product h2 {
+        font-size: 1.7em;
+        margin-top: .6em;
+}
+.phrase {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 2em;
+}
+.phrase p {
+    display: inline-block;
+    font-size: 1.8em;
+}
+.phrase p span {
+    font-size: 1.5em;
+}
+.bottomimg {
+    margin-top: 3.5em;
+}
 }
