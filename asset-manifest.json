@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df5a9fb0.css",
+    "main.js": "/static/js/main.b2305534.js",
+    "static/js/787.ddbafd99.chunk.js": "/static/js/787.ddbafd99.chunk.js",
+    "static/media/bannerbg.jpg": "/static/media/bannerbg.381e963b403d594664d5.jpg",
+    "static/media/home-bottom-img.jpg": "/static/media/home-bottom-img.c5fcd97043e1c9ddd144.jpg",
+    "static/media/mombileHomeBG.jpg": "/static/media/mombileHomeBG.d39bc80826c3e924bd11.jpg",
+    "static/media/mombileHomeBG2.jpg": "/static/media/mombileHomeBG2.0bb12698c65ea35fac8c.jpg",
+    "index.html": "/index.html",
+    "main.df5a9fb0.css.map": "/static/css/main.df5a9fb0.css.map",
+    "main.b2305534.js.map": "/static/js/main.b2305534.js.map",
+    "787.ddbafd99.chunk.js.map": "/static/js/787.ddbafd99.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df5a9fb0.css",
+    "static/js/main.b2305534.js"
+  ]
+}
